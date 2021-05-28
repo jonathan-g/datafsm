@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   FRD_vignette: FRD_vignette.html
   datafsm_introduction: datafsm_introduction.html
-last_built: 2021-05-26T06:42Z
+last_built: 2021-05-28T19:38Z
 urls:
   reference: https://jonathan-g.github.io/datafsm/reference
   article: https://jonathan-g.github.io/datafsm/articles

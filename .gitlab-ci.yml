@@ -20,7 +20,8 @@ pages:
   dependencies:
     - test
   script:
-    - Rscript -e 'devtools::install()'
+    - Rscript -e "deps <- remotes::dev_package_deps(dependencies = NA); needs <- deps[,'package']; remotes::install_deps(dependencies = TRUE); ip <- as.data.frame(installed.packages()); got <- ip[,'Package']; message('deps = ', paste(class(deps), collapse = ', '), '; ip = ', paste(class(ip), collapse = ', '), '; needs = ', paste(class(needs), collapse = ', '), '; got = ', paste(class(got), collapse = ', ')); if (! all(needs %in% got)) { message('missing: ', paste(setdiff(needs, got), collapse = ', ')); quit(save = 'n', status = 1)};    - Rscript -e 'devtools::install()'"
+    - Rscript -e "devtools::install()"
     - Rscript -e 'pkgdown::build_site(preview = FALSE, new_process = TRUE, devel = FALSE, install = TRUE, override = list(destination = "public"))'
   artifacts:
     paths:

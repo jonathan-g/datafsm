@@ -1,7 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version-last-release/datafsm)](https://cran.r-project.org/package=datafsm)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version-last-release/datafsm)](https://cran.r-project.org/package=datafsm)
 [![DOI](https://zenodo.org/badge/94561899.svg)](https://zenodo.org/badge/latestdoi/94561899)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

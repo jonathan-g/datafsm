@@ -119,31 +119,31 @@ Predicts new data with estimated model
 }
 \section{Methods (by generic)}{
 \itemize{
-\item \code{print}: An S4 method for printing a ga_fsm S4 object
+\item \code{print(ga_fsm)}: An S4 method for printing a ga_fsm S4 object
 
-\item \code{show}: An S4 method for showing a ga_fsm S4 object
+\item \code{show(ga_fsm)}: An S4 method for showing a ga_fsm S4 object
 
-\item \code{summary}: An S4 method for summarizing a ga_fsm S4 object
+\item \code{summary(ga_fsm)}: An S4 method for summarizing a ga_fsm S4 object
 
-\item \code{plot}: 
+\item \code{plot(x = ga_fsm, y = ANY)}: 
 
-\item \code{barplot}: 
+\item \code{barplot(ga_fsm)}: 
 
-\item \code{dotchart}: Plots ga_fsm S4 object's variable importances
+\item \code{dotchart(ga_fsm)}: Plots ga_fsm S4 object's variable importances
 
-\item \code{estimation_details}: @export
+\item \code{estimation_details(ga_fsm)}: @export
 
-\item \code{best_performance}: @export
+\item \code{best_performance(ga_fsm)}: @export
 
-\item \code{varImp}: @export
+\item \code{varImp(ga_fsm)}: @export
 
-\item \code{action_vec}: @export
+\item \code{action_vec(ga_fsm)}: @export
 
-\item \code{states}: @export
+\item \code{states(ga_fsm)}: @export
 
-\item \code{predict}: Predicts new data with estimated model
+\item \code{predict(ga_fsm)}: Predicts new data with estimated model
+
 }}
-
 \section{Slots}{
 
 \describe{

@@ -2,8 +2,8 @@
 % Please edit documentation in R/datafsm.R
 \docType{package}
 \name{datafsm}
-\alias{datafsm}
 \alias{datafsm-package}
+\alias{datafsm}
 \title{datafsm: A package for estimating FSM models.}
 \description{
 It relies on the \strong{GA} package:

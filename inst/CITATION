@@ -1,21 +1,22 @@
-citHeader("To cite datafsm in publications use:")
-
-citEntry(entry = "InProceedings",
-         title        = "Data-Driven Dynamic Decision Models",
-         author       = personList(as.person("John J. Nay"),
-                                   as.person("Jonathan M. Gilligan")),
-         booktitle      = "Proceedings of the 2015 Winter Simulation Conference",
-         year         = "2015",
-         editor       = personList(as.person("L. Yilmaz"),
-                                   as.person("W.K.V. Chan"),
-                                   as.person("I. Moon"),
-                                   as.person("T.M.K. Roeder"),
-                                   as.person("C. Macal"),
-                                   as.person("M. Rosetti")),
-         textVersion  =
-             paste("John J. Nay, Jonathan M. Gilligan (2015)",
-                   '"Data-Driven Dynamic Decision Models,"',
-                   "in",
-                   "L. Yilmaz et al. (eds.),",
-                   "Proc. 2015 Winter Simulation Conf.")
+bibentry(
+  bibtype = "InProceedings",
+  title = "Data-driven dynamic decision models",
+  author = c(
+    person(given = "John", middle = "J.", family = "Nay"),
+    person(given = "Jonathan", middle = "M.", family = "Gilligan",
+           email = "jonathan.gilligan@vanderbilt.edu",
+           comment = c(ORCID = "0000-0003-1375-6686"))
+           )
+  booktitle = ""Proceedings of the 2015 Winter Simulation Conference,
+  year = "2015"
+  editor = c(
+    person(given = "L.", family = "Yilmaz"),
+    person(given = "W.", middle = "K. V.", family = "Chan"),
+    person(given = "I.", family = "Moon"),
+    person(given = "T.", middle = "M. K.", family = "Roeder"),
+    person(given = "C.", family = "Macal"),
+    person(given = "M.", family = "Rosetti")
+  ),
+  pages = "2752--2763",
+  doi = "10.1109/WSC.2015.7408381"
 )

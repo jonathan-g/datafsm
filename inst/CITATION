@@ -2,18 +2,18 @@ bibentry(
   bibtype = "InProceedings",
   title = "Data-driven dynamic decision models",
   author = c(
-    person(given = "John", middle = "J.", family = "Nay"),
-    person(given = "Jonathan", middle = "M.", family = "Gilligan",
+    person(given = c("John", "J."), family = "Nay"),
+    person(given = c("Jonathan", "M."), family = "Gilligan",
            email = "jonathan.gilligan@vanderbilt.edu",
            comment = c(ORCID = "0000-0003-1375-6686"))
-           )
-  booktitle = ""Proceedings of the 2015 Winter Simulation Conference,
-  year = "2015"
+           ),
+  booktitle = "Proceedings of the 2015 Winter Simulation Conference",
+  year = "2015",
   editor = c(
     person(given = "L.", family = "Yilmaz"),
-    person(given = "W.", middle = "K. V.", family = "Chan"),
+    person(given = c("W.", "K.", "V."), family = "Chan"),
     person(given = "I.", family = "Moon"),
-    person(given = "T.", middle = "M. K.", family = "Roeder"),
+    person(given = c("T.", "M.", "K."), family = "Roeder"),
     person(given = "C.", family = "Macal"),
     person(given = "M.", family = "Rosetti")
   ),

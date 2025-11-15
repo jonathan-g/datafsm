@@ -1,3 +1,7 @@
+# datafsm 0.2.5
+
+* Updated CITATION file to use new specifications.
+
 # datafsm 0.2.4 
 
 * Fix error in testing where I created a matrix from a vector of length 8

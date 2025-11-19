@@ -1,75 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/NV_games.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/action_vec.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/add_interact_num.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/best_performance.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/build_bitstring.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/compare_fsm.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/datafsm.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/decode_action_vec.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/decode_state_mat.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/degeneracy_check.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/estimation_details.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/evolve_model.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/evolve_model_cv.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/evolve_model_ntimes.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/find_wildcards.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/fitnessCPP.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/ga_fsm-class.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/performance.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/states.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/varImp.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/reference/var_imp.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/articles/FRD_vignette.html</loc>
-  </url>
-  <url>
-    <loc>https://jonathan-g.github.io/datafsm/articles/datafsm_introduction.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://jonathan-g.github.io/datafsm/404.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/LICENSE-text.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/LICENSE.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/articles/FRD_vignette.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/articles/datafsm_introduction.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/articles/index.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/authors.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/index.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/news/index.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/NV_games.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/action_vec.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/add_interact_num.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/best_performance.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/build_bitstring.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/compare_fsm.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/datafsm.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/decode_action_vec.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/decode_state_mat.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/degeneracy_check.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/estimation_details.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/evolve_model.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/evolve_model_cv.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/evolve_model_ntimes.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/find_wildcards.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/fitnessCPP.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/ga_fsm-class.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/index.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/performance.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/states.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/varImp.html</loc></url>
+<url><loc>https://jonathan-g.github.io/datafsm/reference/var_imp.html</loc></url>
 </urlset>
+

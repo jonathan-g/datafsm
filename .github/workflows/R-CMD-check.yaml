@@ -39,8 +39,10 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
-          needs: check
+          cache: true
+          extra-packages: |
+            any::rcmdcheck
+            any::remotes
           install-pandoc: true
 
       - name: Identify Environment

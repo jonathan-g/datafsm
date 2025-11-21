@@ -1,4 +1,4 @@
-image: jgilligan/jg-verse:4.4.2
+image: jgilligan/jg-verse:4.5.2
 
 stages:
   - test

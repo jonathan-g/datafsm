@@ -1,4 +1,4 @@
-image: jgilligan/jg-verse:4.1.0
+image: jgilligan/jg-verse:4.4.2
 
 stages:
   - test
@@ -29,4 +29,3 @@ pages:
     expire_in: 30 days
   only:
     - main
-    - master

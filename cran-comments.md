@@ -1,7 +1,7 @@
 ## Test environments
 
 * local build Windows 11 R 4.5.2
-* local build ubuntu 20.04.2 LTS, R 4.1.0
+* local build ubuntu 24.04.3 LTS, R 4.5.2
 * GitHub Actions builds:
   * ubuntu-latest: 24.04.3 LTS, R-release (4.5.2)
   * ubuntu-latest: 24.04.3 LTS, R-devel 
@@ -10,18 +10,10 @@
 
 ## R CMD check results
 
-* All builds except win-builder:
+* All builds:
 
   0 errors | 0 warnings | 0 notes
 
-* Win-builder R-devel and R-oldrelease
-  
-  0 errors | 0 warnings | 1 note
-  
-* Win-builder R-release
-
-  1 error | 1 warning | 1 note
-  
 ### Comments on win-builder results
 
 * The **note** in R-release, R-devel, and R-oldrelease is a harmless note about 

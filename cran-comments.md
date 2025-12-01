@@ -1,30 +1,12 @@
 ## Test environments
 
-* local build Windows 10, R 4.1.0
+* local build Windows 11 R 4.5.2
 * local build ubuntu 20.04.2 LTS, R 4.1.0
 * GitHub Actions builds:
-  * ubuntu-20.04: 20.04.2 LTS, R-release
-  * ubuntu-20.04: 20.04.2 LTS, R-devel
-  * macOS-latest: Catalina 10.15.7, R-release
-  * windows-latest: Server 2019 10.0.17763, R-release
-* R-hub builder:
-  * ubuntu 20.04.1 LTS, R-release GCC
-  * ubuntu 20.04.1 LTS, R-devel GCC
-  * macOS 10.13.6 High Sierra, R-release CRAN's setup
-  * macOS 10.13.6 High Sierrs, R-release
-  * fedora, R-devel GCC
-  * fedora, R-devel clang, gfortran
-  * debian, R-release GCC
-  * debian, R-devel GCC
-  * debian, R-devel clang
-  * debian, R-patched GCC
-  * windows, server 2008 R2 SP1, R-release
-  * windows, server 2008 R2 SP1, R-oldrel
-  * windows, server 2008 R2 SP1, R-patched
-* win-builder builds:
-  * R-release
-  * R-devel
-  * R-oldrelease
+  * ubuntu-latest: 24.04.3 LTS, R-release (4.5.2)
+  * ubuntu-latest: 24.04.3 LTS, R-devel 
+  * macOS-latest: Sequoia 15.7.1, R-release (4.5.2)
+  * windows-latest: Server 2022 x64 Build 26100, R-release (4.5.2)
 
 ## R CMD check results
 

@@ -66,7 +66,7 @@ setMethod("show", "ga_fsm",
 ################################################################################
 #' Turns ga_fsm S4 object into list of summaries for printing and then prints it.
 #' @describeIn ga_fsm An S4 method for summarizing a ga_fsm S4 object
-#' 
+#'
 #' @aliases summary,ga_fsm-method
 #'
 #' @param object S4 ga_fsm object
@@ -133,13 +133,13 @@ setMethod("summary", "ga_fsm",
 #' @describeIn ga_fsm
 #'
 #' @aliases plot,ga_fsm-method
-#' 
+#'
 #' @usage \S4method{plot}{ga_fsm,ANY}(x, y, maintitle = "Transition Diagram",
-#'           action_label = NULL, transition_label = NULL, 
+#'           action_label = NULL, transition_label = NULL,
 #'           curvature = c(0.3, 0.6, 0.8))
 #'
 #' @param y not used.
-#' @param maintitle optional character vector 
+#' @param maintitle optional character vector
 #' @param action_label optional character vector same length as action vector,
 #'   where each ith element corresponds to what that ith element in the action
 #'   vector represents. This will be used to fill in the states (circles) of the
@@ -148,12 +148,12 @@ setMethod("summary", "ga_fsm",
 #'   columns of state transition matrix.
 #' @param curvature optional numeric vector specifying the curvature of the
 #'   lines for a diagram of 2 or more states.
-#'   
+#'
 #' @export
 
 setMethod("plot", "ga_fsm",
           function(x, y, maintitle = "Transition Diagram",
-                   action_label = NULL, 
+                   action_label = NULL,
                    transition_label = NULL,
                    curvature = c(0.3, 0.6, 0.8)) {
             actions <- x@actions
@@ -162,18 +162,18 @@ setMethod("plot", "ga_fsm",
             action_vec <- x@action_vec
             predictive <- x@predictive
             varImp <- x@varImp
-            
+
             s <- t(state_mat)
-            
+
             if (missing(action_label))
               action_label <- paste0(action_vec)
-            
+
             if (missing(transition_label))
               transition_label <- as.character(seq(nrow(s)))
-            
-            M <- as.data.frame(matrix(nrow = length(action_vec), ncol = length(action_vec), 
+
+            M <- as.data.frame(matrix(nrow = length(action_vec), ncol = length(action_vec),
                                       byrow = TRUE, data = 0))
-            
+
             for (i in seq(nrow(s))){
               for (j in seq(ncol(s))){
                 if (M[s[i, j], j] == "0"){
@@ -183,14 +183,14 @@ setMethod("plot", "ga_fsm",
                 }
               }
             }
-            
-            diagram::plotmat(M, 
-                             pos = length(action_vec), 
-                             curve = curvature[(length(action_vec)-1)], 
-                             name = action_label, 
-                             lwd = 1, box.lwd = 2, 
-                             cex.txt = 0.8, 
-                             box.type = "circle", 
+
+            diagram::plotmat(M,
+                             pos = length(action_vec),
+                             curve = curvature[(length(action_vec)-1)],
+                             name = action_label,
+                             lwd = 1, box.lwd = 2,
+                             cex.txt = 0.8,
+                             box.type = "circle",
                              box.col = "lightblue",
                              box.prop = 1,
                              add = FALSE,
@@ -204,7 +204,7 @@ setMethod("plot", "ga_fsm",
 #'
 #' @param height ga_fsm S4 object
 #' @param ... arguments to be passed to/from other methods.
-#'   
+#'
 #' @export
 
 setMethod("barplot", "ga_fsm",
@@ -325,14 +325,14 @@ setMethod("states", "ga_fsm",
 #' @param type Not currently used.
 #' @param na.action Optional function.
 #' @inheritParams evolve_model
-#' 
+#'
 #' @export
 setMethod("predict", "ga_fsm",
           function(object, data,
                    type = "prob", na.action = stats::na.omit, ...){
-            
+
             ## Data-related errors:
-            if (missing(data)) 
+            if (missing(data))
               stop(paste("You must supply data. At the very least, you can supply data.",
                          "This should be a data.frame that has columns named 'period' and 'outcome' (period",
                          "is the time period that the outcome action was taken), and the rest of the",
@@ -351,17 +351,17 @@ setMethod("predict", "ga_fsm",
                             "integer vectors and the columns with the predictor variable data should be",
                             "logical vectors."))
             }
-            
+
             ## Data preparation:
             period <- data$period
-            
+
             inputs <- 2^(ncol(data[ , -which(names(data) %in% c("period", "outcome")), drop = FALSE]))
-            
+
             # change any non-logical predictor variable vectors to logical
             data[ , -which(names(data) %in% c("period", "outcome"))] <-
               data.frame(lapply(data[ , -which(names(data) %in% c("period", "outcome"))],
                                 function(x) {
-                                  if (class(x)!="logical") {
+                                  if (! is(x, "logical")) {
                                     as.logical(x)
                                   } else {
                                     x
@@ -376,9 +376,9 @@ setMethod("predict", "ga_fsm",
               stop(paste("Error: You have missing values in your training data somewhere other than the first period interactions.",
                          "You can only have missing values for predictor columns, AND these must be in rows where period==1."))
             data[is.na(data)] <- TRUE
-            
+
             names <- colnames(data[ , -which(names(data) %in% c("period", "outcome")), drop = FALSE])
-            
+
             if (length(names)==1){
               form <- paste("outcome ~ 0 +", names, sep=" ")
               data <- stats::model.matrix(eval(parse(text=form)), data)
@@ -387,21 +387,21 @@ setMethod("predict", "ga_fsm",
               form <- paste("outcome ~ 0 +", predictors, sep=" ")
               data <- stats::model.matrix(eval(parse(text=form)), data)
             }
-            
+
             if (ncol(data) != inputs)
               stop(paste("Error: At least one of your predictor variables in your data",
                          "does not have exactly 2 levels."))
-            
+
             ##########
             state_mat <- object@state_mat
             action_vec <-  object@action_vec
             results <- fitnessCPP(action_vec, state_mat, data, period)
-            
+
             ##########
             if (anyNA(results) | length(results)==0){
               warning("Error: Results from fitness evaluation have missing values.")
             }
-            
+
             results
           }
 )

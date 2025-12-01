@@ -346,7 +346,7 @@ evolve_model <- function(data, test_data = NULL, drop_nzv = FALSE,
     data[ , -which(names(data) %in% c("period", "outcome"))] <-
       data.frame(lapply(data[ , -which(names(data) %in% c("period", "outcome"))],
                         function(x) {
-                          if (! is(x, "logical")) {
+                          if (! methods::is(x, "logical")) {
                             as.logical(x)
                           } else {
                             x
@@ -548,7 +548,7 @@ evolve_model <- function(data, test_data = NULL, drop_nzv = FALSE,
       test_data[ , -which(names(test_data) %in% c("period", "outcome"))] <-
         data.frame(lapply(test_data[ , -which(names(test_data) %in% c("period", "outcome"))],
                           function(x) {
-                            if (! is(x, "logical")) {
+                            if (! methods::is(x, "logical")) {
                               as.logical(x)
                             } else {
                               x

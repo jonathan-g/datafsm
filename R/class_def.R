@@ -361,7 +361,7 @@ setMethod("predict", "ga_fsm",
             data[ , -which(names(data) %in% c("period", "outcome"))] <-
               data.frame(lapply(data[ , -which(names(data) %in% c("period", "outcome"))],
                                 function(x) {
-                                  if (! is(x, "logical")) {
+                                  if (! methods::is(x, "logical")) {
                                     as.logical(x)
                                   } else {
                                     x

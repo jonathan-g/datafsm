@@ -71,7 +71,7 @@ evolve_model_cv <- function(data, measure, k, actions, max_states,
     # In the fth fold, the elements of folds that equal f are in the test set, and the remainder are in the training set.
     for(f in seq(k)){
       training <- fold_ass == f
-      if( ! is(training, "logical")) stop("Training index not logical vector.")
+      if( ! methods::is(training, "logical")) stop("Training index not logical vector.")
       if(verbose) message("\nCross-validated testing with states set to ", s, "\n")
       mat[s, f] <- evolve_model(data[training, ], data[!training, ],
                                 drop_nzv = FALSE,
